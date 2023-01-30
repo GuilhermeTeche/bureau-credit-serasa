@@ -1,0 +1,22 @@
+app:
+  title: BureauCreditSerasa
+  description: Teste Itau
+  version: 1.0.0
+
+server:
+  port: 7171
+
+spring:
+  jackson:
+    parser:
+      allow-numeric-leading-zeros: true
+
+
+# change health check status code
+management:
+  endpoint:
+    health:
+      status:
+        http-mapping:
+          DONW: 500
+
